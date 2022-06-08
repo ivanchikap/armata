@@ -1,0 +1,93 @@
+.mobile-menu {
+  $root: &;
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background: rgba(0,0,0,.5);
+  opacity: 0;
+  transition: all .3s ease-out;
+  @include mobile {
+    max-width: 100%;
+  }
+
+  &--active {
+    z-index: 11;
+    opacity: 1;
+
+    #{$root}__inner {
+
+      transform: translateX(0);
+    }
+  }
+
+  &__inner {
+    padding: 14px;
+    position: absolute;
+    z-index: 11;
+    max-width: 320px;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $dark-blue;
+    box-shadow: -6px 4px 12px rgba(0, 0, 0, .2);
+    transform: translateX(106%);
+    transition: all .3s ease-out;
+    text-align: right;
+    line-height: normal;
+  }
+
+  &__close {
+    color: #000;
+    font-size: 26px;
+    padding: 8px 12px;
+    cursor: pointer;
+    align-self: flex-end;
+    z-index: 12;
+    transition: color .3s;
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+.mobile-btn {
+  display: none;
+  padding: 6px;
+  height: 30px;
+  width: 42px;
+  cursor: pointer;
+  align-items: center;
+  margin-left: 12px;
+  flex-shrink: 0;
+
+  @include tablet {
+    display: flex;
+  }
+
+  @include mobile {
+    margin-left: 6px;
+  }
+
+  &__bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    box-shadow: 0 10px 0 #fff, 0 -10px 0 #fff;
+    transition: all .2s ease;
+  }
+
+  &:hover {
+    .mobile-btn__bar {
+      background-color: $orange;
+      box-shadow: 0 10px 0 $orange, 0 -10px 0 $orange;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.nav {
+  $root: &;
+  font-family: $raleway-regular;
+  font-size: 14px;
+  font-weight: 400;
+  max-width: calc(75% - 100px);
+  display: flex;
+  overflow: hidden;
+
+  @include tablet {
+    display: none;
+  }
+
+  &.nav--mobile {
+    flex-direction: column;
+    line-height: 1.4666;
+    max-width: 100%;
+    text-align: left;
+    color: #fff;
+
+    @include tablet {
+      display: flex;
+    }
+
+    #{$root} {
+      &__item {
+        padding: 10px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__item {
+    padding: 0 10px;
+    font-family: $raleway-regular;
+    font-size: 14px;
+    white-space: nowrap;
+    @extend .link;
+
+    &--active {
+      color: $orange;
+      text-decoration: underline;
+    }
+  }
+
+  &__menu-btn {
+    display: none;
+    font-size: 24px;
+    line-height: 46px;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+
+    @include tablet {
+      display: inline-block;
+    }
+  }
+}
