@@ -1,0 +1,93 @@
+.section {
+    padding-top: 100px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        background-image: url(../img/bah_1.png);
+        top: -6px;
+        height: 6px;
+    }
+    
+    &__header {
+        text-align: center;
+        max-width: 80%;
+        margin: 0 auto 60px auto;
+    }
+
+    &__title {
+        color: #2c3949;
+        font-family: $slab-medium;
+        font-size: 30px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        padding-bottom: 28px;
+        position: relative;
+        margin-bottom: 28px;
+
+        &::after {
+            content: '';
+            width: 165px;
+            height: 4px;
+            background-color: $orange;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__main-bottom {
+        background-color: $blue;
+        padding: 20px 0 60px 0;
+    }
+
+    &__main-top {
+        position: relative;
+        background-image: url(../img/shape-1.svg), url("../img/icons/section_1/scales.svg"),
+        radial-gradient(circle closest-side, rgba(0, 0, 0, .05) 59%, rgba(0,0,0,0.03) 59%, rgba(0,0,0,0.03) 100%, rgba(0, 0, 0, 0) 100%);
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: center 100.4%, 49.3% 86%, 50% 0;
+        background-size: 100% 100px, 159px 174px, 850px 850px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 50%;
+            bottom: 12px;
+            transform: translateX(-50%);
+            width: 118px;
+            height: 55px;
+            background: url(../img/logo_triangle.svg) no-repeat center center / cover;
+        }
+    }
+
+    &__footer {
+        text-align: center;
+        line-height: 170px;
+        height: 170px;
+        background-color: $dark-blue;
+        vertical-align: middle;
+    }
+
+   
+
+    @include laptop {
+        padding-top: 80px;
+    }
+
+    @include tablet {
+        padding-top: 70px;
+    }
+
+    @include mobile-large {
+        padding-top: 60px;
+    }
+
+    @include mobile {
+        padding-top: 40px;
+    }
+}

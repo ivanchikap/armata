@@ -5,6 +5,7 @@ body {
   font-weight: 400;
   color: #333;
   line-height: 1.4666;
+  background-color: #f9f9f9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -60,29 +61,6 @@ h1 {
   font-size: 48px;
 }
 
-.default-section {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  border-bottom: 1px solid #dee2e6;
-
-  @include laptop {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-  @include tablet {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-  @include mobile-large {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  @include mobile {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-
 .d-block {
   display: block;
 }
@@ -132,7 +110,7 @@ h1 {
 }
 
 .btn {
-  display: block;
+  display: inline-block;
   padding: 14px 34px;
   box-shadow: 0 3px 0 #b97200;
   background-color: #f39f18;

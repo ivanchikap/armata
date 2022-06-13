@@ -1,0 +1,26 @@
+.article {
+  $root: &;
+  border-bottom: 1px solid #dee1e5;
+  padding-bottom: 18px;
+
+  &--on-blue-bg {
+    border-bottom: 1px solid #546476;
+    #{$root} {
+      &__text {
+        color: #f3f3f3;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $slab-medium;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    color: #111;
+  }
+}
