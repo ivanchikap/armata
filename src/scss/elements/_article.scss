@@ -2,6 +2,8 @@
   $root: &;
   border-bottom: 1px solid #dee1e5;
   padding-bottom: 18px;
+  max-width: 100%;
+  overflow: hidden;
 
   &--on-blue-bg {
     border-bottom: 1px solid #546476;

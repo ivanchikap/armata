@@ -13,8 +13,24 @@
     
     &__header {
         text-align: center;
-        max-width: 80%;
+        max-width: 941px;
         margin: 0 auto 60px auto;
+
+        @include laptop {
+            max-width: 860px;
+        }
+
+        @include tablet {
+            max-width: 680px;
+        }
+
+        @include mobile-large {
+            max-width: 480px;
+        }
+
+        @include mobile {
+            max-width: 93%;
+        }
     }
 
     &__title {
@@ -39,6 +55,23 @@
         }
     }
 
+    &__subtitle {
+        font-family: $slab-medium;
+        font-size: 24px;
+        line-height: 1.5;
+        text-align: center;
+        text-transform: uppercase;
+        color: $blue;
+        margin-top: 54px;
+    }
+
+    &__main {
+        padding-bottom: 100px;
+        &--no-padding {
+            padding-bottom: 0;
+        }
+    }
+
     &__main-bottom {
         background-color: $blue;
         padding: 20px 0 60px 0;
@@ -51,6 +84,7 @@
         background-repeat: no-repeat, no-repeat, no-repeat;
         background-position: center 100.4%, 49.3% 86%, 50% 0;
         background-size: 100% 100px, 159px 174px, 850px 850px;
+        padding-bottom: 100px;
 
         &::after {
             content: '';
@@ -71,9 +105,11 @@
         height: 170px;
         background-color: $dark-blue;
         vertical-align: middle;
+        
+        &--gray {
+            background-color: #e5e5e5;
+        }
     }
-
-   
 
     @include laptop {
         padding-top: 80px;
