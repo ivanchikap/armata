@@ -1,3 +1,26 @@
 .deals {
-
+  .col-2:not(:nth-child(-n + 6)) {
+    margin-top: 40px;
+  }
+  .col-md-3:not(:nth-child(-n + 4)) {
+    @include tablet {
+      margin-top: 40px;
+    }
+  }
+  .col-sm-4:not(:nth-child(-n + 3)) {
+    @include mobile-large {
+      margin-top: 40px;
+    }
+  }
+  .col-xs-6:not(:nth-child(-n + 2)) {
+    @include mobile {
+      margin-top: 40px;
+    }
+  }
+  .col-2:nth-child(7) {
+    margin-left: 16.66667%;
+    @include tablet {
+      margin-left: 0;
+    }
+  }
 }

@@ -1,6 +1,29 @@
 .section {
+    $root: &;
     padding-top: 100px;
     position: relative;
+
+    &--blue {
+        background-color: $dark-blue;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            background-image: url(../img/bah_2.png) !important;
+            top: -6px;
+            height: 6px;
+        }
+
+        #{$root} {
+            &__title {
+                color: #f9f9f9;
+            }
+            &__desc {
+                color: #e5e5e5;
+            }
+        }
+    }
 
     &::before {
         content: '';
@@ -101,13 +124,16 @@
 
     &__footer {
         text-align: center;
-        line-height: 170px;
+        line-height: 194px;
         height: 170px;
         background-color: $dark-blue;
         vertical-align: middle;
         
         &--gray {
             background-color: #e5e5e5;
+        }
+        &--blue {
+            background-color: $blue;
         }
     }
 

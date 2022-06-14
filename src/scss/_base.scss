@@ -43,6 +43,23 @@ b, strong {
   }
 }
 
+.link-inverse-black {
+  color: #111;
+  text-decoration: underline;
+  transition: all .2s;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.text-overflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .before {
   content: '';
   width: 100%;
@@ -121,6 +138,8 @@ h1 {
   font-weight: 700;
   line-height: 19px;
   transition: all .2s;
+  max-width: 100%;
+  @extend .text-overflow;
 
   &:hover {
     box-shadow: none;
