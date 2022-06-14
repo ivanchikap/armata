@@ -126,6 +126,18 @@ $(document).ready(function(){
 */
     //Плавна прокрутка по якорям сайту
 
+    $(".benefits").waypoint(function() {
+        $(".benefits .ben-card").each(function(index) {
+            let ths = $(this);
+            setInterval(function() {
+                ths.removeClass("ben-card--off").addClass("ben-card--on");
+            },150*index);
+        });
+    }, {
+        offset: "30%"
+    });
+    //анімація карточок benefits
+
     let nav = document.getElementById('nav');
     let navMobile = document.getElementById('navMobile');
 

@@ -6,9 +6,28 @@
     background: url(../img/s3_sun_bg.png) no-repeat center / 850px 850px;
     min-height: 850px;
     margin: 0 auto 63px auto;
-    padding-top: 78px;
+    padding: 110px 15px 0 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+
+    @include tablet {
+      padding: 26px 15px 0 15px;
+      max-width: 700px;
+      min-height: 700px;
+      background-size: 700px 700px;
+    }
+
+    @include mobile-large {
+      justify-content: space-between;
+      padding-top: 40px;
+      background-image: none;
+      max-width: 570px;
+      min-height: auto;
+    }
+  }
+  .section__header {
+    margin-bottom: 0;
   }
 }

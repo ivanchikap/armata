@@ -1,0 +1,20 @@
+.benefits {
+  .col-4 {
+    perspective: 600px;
+  }
+  .col-md-6:not(:nth-child(-n + 2)) {
+    @include tablet {
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .col-xs-12:not(:nth-child(-n + 1)) {
+    @include mobile {
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
