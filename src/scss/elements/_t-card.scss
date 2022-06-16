@@ -1,0 +1,83 @@
+.t-card {
+  background-color: #e5e5e5;
+  padding: 52px 32px;
+  text-align: center;
+  color: #333333;
+  width: 262px;
+  margin: 0 15px;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: all 1s ease;
+
+  &:not(:nth-child(-n + 2)) {
+    @include tablet {
+      margin-top: 30px;
+    }
+  }
+
+  &:not(:nth-child(-n + 1)) {
+    @include mobile {
+      margin-top: 30px;
+    }
+  }
+
+  @include mobile-large {
+    width: 224px;
+    padding: 28px 16px;
+  }
+
+  @include mobile {
+    width: 262px;
+  }
+
+  &--on {
+    opacity: 1;
+  }
+
+  &--off {
+    transform: rotateY(100deg);
+    opacity: 0;
+  }
+
+  &__img {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px #d6d6d6;
+    margin: 0 auto;
+    transition: transform .3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+    img {
+      @extend .img;
+    }
+  }
+
+  &__name {
+    font-family: $raleway-bold;
+    font-size: 16px;
+    line-height: 2.25;
+    margin-top: 25px;
+    @extend .text-overflow;
+  }
+
+  &__position {
+    color: #6e7b8b;
+    font-size: 13px;
+  }
+
+  &__link {
+    display: block;
+    color: #333333;
+    font-family: $roboto-bold;
+    font-size: 16px;
+    line-height: 2.25;
+    margin-top: 10px;
+
+    @extend .text-overflow;
+  }
+
+}

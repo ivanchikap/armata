@@ -30,6 +30,20 @@
     height: 139px;
     background: url("../img/tc_triangle_first.svg") no-repeat center / cover;
     padding: 43px 46px 43px 36px;
+    perspective: 600px;
+    opacity: 0;
+    transform: rotateY(-90deg);
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &--on {
+      transition: opacity,transform .5s ease;
+      opacity: 1;
+      transform: rotateY(0);
+    }
 
     @include laptop {
       width: 338px;

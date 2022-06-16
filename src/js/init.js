@@ -2,7 +2,6 @@ $(document).ready(function(){
 
 
 /*
-
     //SVG Fallback
     if(!Modernizr.svg) {
         $("img[src*='svg']").attr("src", function() {
@@ -24,8 +23,6 @@ $(document).ready(function(){
 
     $("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
-
-
     $(window).stellar({
         responsive: true,
         parallaxBackgrounds: true,
@@ -36,8 +33,6 @@ $(document).ready(function(){
         scrollProperty: 'scroll'
     });
     //Прокрутка бекграунда разом зі скролом. Необхідно stellar.min.js і наче jquery-migrate.min.js
-
-
 
     if (document.getElementById('btnMenu')) {
         let navMenuBtn = document.getElementById('btnMenu');
@@ -138,14 +133,35 @@ $(document).ready(function(){
     });
     //анімація карточок benefits
 
+    $(".works").waypoint(function() {
+        $(".works .works__item").each(function(index) {
+            let ths = $(this);
+            setTimeout(function() {
+                ths.addClass("works__item--on");
+            },450*index);
+        });
+    }, {
+        offset: "50%"
+    });
+    //анімація works__item
+
+    $(".team").waypoint(function() {
+        $(".team .t-card").each(function(index) {
+            let ths = $(this);
+            setInterval(function() {
+                ths.removeClass("t-card--off").addClass("t-card--on");
+            },150*index);
+        });
+    }, {
+        offset: "30%"
+    });
+    //анімація карточок benefits
+
     let nav = document.getElementById('nav');
     let navMobile = document.getElementById('navMobile');
 
     nav.addEventListener('click',  navActive);
     navMobile.addEventListener('click',  navActiveMobile);
-
-
-
 
     function navActive(e) {
         console.log('work');
@@ -171,4 +187,16 @@ $(document).ready(function(){
             e.target.classList.toggle('nav__item--active');
         }
     }
+
+    $(".slider").owlCarousel({
+        items: 1,
+        nav: true,
+        navText: "",
+        dots: true,
+        loop: true,
+        fluidSpeed: 500,
+        navSpeed: 500,
+        dotsSpeed: 500,
+        dragEndSpeed: 500,
+    });
 });

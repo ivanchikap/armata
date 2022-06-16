@@ -1,9 +1,30 @@
 .form {
+  $root: &;
   padding: 36px 32px;
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.6);
   background-color: rgba(36, 51, 67, .8);
   width: 360px;
   color: #778390;
+
+  &--gray {
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.6);
+    background-color: rgba(214, 214, 214, 0.8);
+
+    #{$root} {
+      &__input {
+        box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.4);
+        background-color: #c0c0c0;
+        color: #2c3949;
+      }
+
+      &__title {
+        color: #2c3949;
+      }
+      &__desc {
+        color: #5e6267;
+      }
+    }
+  }
 
   @include tablet {
     padding: 30px 22px;

@@ -1,0 +1,9 @@
+.team {
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    perspective: 600px;
+  }
+}

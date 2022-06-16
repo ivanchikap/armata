@@ -25,6 +25,19 @@
         }
     }
 
+    &--gray {
+        background-color: #e5e5e5;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            background-image: url(../img/bah_3.png) !important;
+            top: -6px;
+            height: 6px;
+        }
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -102,6 +115,15 @@
 
         &--no-padding {
             padding-bottom: 0;
+            @include laptop {
+                padding-bottom: 0;
+            }
+            @include tablet {
+                padding-bottom: 0;
+            }
+            @include mobile-large {
+                padding-bottom: 0;
+            }
         }
     }
 
@@ -145,7 +167,7 @@
         }
         
         &--gray {
-            background-color: #e5e5e5;
+            background-color: #d6d6d6;
         }
         &--blue {
             background-color: $blue;

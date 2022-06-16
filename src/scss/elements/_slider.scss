@@ -1,0 +1,110 @@
+.slider {
+  $root: &;
+
+  &__item {
+    text-align: center;
+    color: #333333;
+    font-size: 14px;
+    margin-bottom: 40px;
+    padding: 8px 0;
+    position: relative;
+  }
+
+  &__img-wrap {
+    display: inline-block;
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 6px $orange;
+    margin-bottom: 26px;
+
+    img {
+      @extend .img
+    }
+  }
+
+  &__title {
+    font-family:$raleway-bold;
+    font-size: 18px;
+    line-height: 2;
+  }
+
+  &__description {
+    display: inline-block;
+    color: #6e7b8b;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  
+  .owl-dots {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .owl-dot {
+    width: 15px;
+    height: 15px;
+    margin: 0 3px;
+    border-radius: 50%;
+    background-color: #d6d6d6;
+    display: inline-block;
+
+    &.active {
+      background-color: $orange;
+    }
+  }
+
+  .owl-nav > div {
+    height: 29px;
+    width: 16px;
+    background-image: url(../img/slider_arrows.png);
+    position: absolute;
+    top: 12%;
+    opacity: .5;
+    transition: all .25s ease;
+    &:hover {
+      opacity: 1;
+    }
+
+    @include mobile {
+      top: 8%;
+    }
+  }
+
+  .owl-prev {
+    left: 20px;
+  }
+  .owl-next {
+    right: 20px;
+    background-position: -16px 0;
+  }
+
+  .owl-item {
+    #{$root} {
+      &__img-wrap, &__title, &__description, &__text {
+        transition: all .7s ease;
+        opacity: 0;
+        transform: translate3d(200px, 0, 0);
+        transition-delay: .1s;
+      }
+      &__title {
+        transition-delay: .3s;
+      }
+      &__description {
+        transition-delay: .3s;
+      }
+      &__text {
+        transition-delay: .5s;
+      }
+    }
+    &.active {
+      #{$root} {
+        &__img-wrap, &__title, &__description, &__text {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
+  }
+}
