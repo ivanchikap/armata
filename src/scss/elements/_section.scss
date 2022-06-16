@@ -90,6 +90,16 @@
 
     &__main {
         padding-bottom: 100px;
+        @include laptop {
+            padding-bottom: 80px;
+        }
+        @include tablet {
+            padding-bottom: 60px;
+        }
+        @include mobile-large {
+            padding-bottom: 40px;
+        }
+
         &--no-padding {
             padding-bottom: 0;
         }
@@ -128,6 +138,11 @@
         height: 170px;
         background-color: $dark-blue;
         vertical-align: middle;
+
+        @include tablet {
+            height: 120px;
+            line-height: 150px;
+        }
         
         &--gray {
             background-color: #e5e5e5;
