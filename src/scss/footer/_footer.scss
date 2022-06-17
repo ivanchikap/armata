@@ -1,0 +1,26 @@
+.footer {
+
+  .header__top {
+    padding: 40px 0;
+  }
+
+  .header__logo {
+    opacity: .35;
+  }
+
+  .header__tel {
+    opacity: .45;
+  }
+
+  .nav__item {
+    color: #c7c9cc;
+    transition: all .2s ease;
+    &:hover {
+      color: $orange;
+      text-decoration: underline;
+    }
+  }
+}
+footer.section {
+  padding: 0;
+}
