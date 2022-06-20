@@ -20,6 +20,15 @@
       text-decoration: underline;
     }
   }
+  
+  &__bottom {
+    height: 36px;
+    background-color: #1f2b3a;
+    background-image: url(../img/top.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+  }
 }
 footer.section {
   padding: 0;

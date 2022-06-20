@@ -65,6 +65,14 @@
 
   &__item {
     text-align: center;
+    opacity: 0;
+    transform: translateY(-25px);
+    transition: all .4s ease;
+
+    &--on {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__item-img-wrap {

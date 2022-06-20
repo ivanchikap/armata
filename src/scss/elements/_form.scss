@@ -6,6 +6,16 @@
   width: 360px;
   color: #778390;
 
+  &--callback {
+    margin: 0 auto;
+    position: relative;
+    background-color: rgba(36, 51, 67, 1);
+
+    .mfp-close {
+      color: #eee;
+    }
+  }
+
   &--gray {
     box-shadow: 0 4px 0 rgba(0, 0, 0, 0.6);
     background-color: rgba(214, 214, 214, 0.8);
@@ -39,6 +49,7 @@
     color: #ffffff;
     font-family: $slab-medium;
     font-size: 28px;
+    line-height: 1.2;
     font-weight: 500;
   }
 
@@ -48,7 +59,7 @@
     letter-spacing: 0.52px;
     font-size: 13px;
     line-height: 18px;
-    margin: 8px 0 22px 0;
+    margin: 14px 0 22px 0;
   }
 
   &__control {

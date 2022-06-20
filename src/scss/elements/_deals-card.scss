@@ -1,6 +1,14 @@
 .deals-card {
   max-width: 100%;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(-25px);
+  transition: all .4s ease;
+
+  &--on {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   &__img {
     display: block;

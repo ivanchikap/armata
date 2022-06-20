@@ -91,6 +91,10 @@
         }
     }
 
+    &__desc {
+        animation-delay: .4s;
+    }
+
     &__subtitle {
         font-family: $slab-medium;
         font-size: 24px;

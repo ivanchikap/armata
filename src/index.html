@@ -66,6 +66,7 @@
                     </div>
                     <!--/form__control-->
                     <button class="form__button btn btn--default" type="submit">Отправить</button>
+                    <input type="hidden" name="formName" value="заявка с верхней формы">
                 </form>
                 <!--/form-->
             </div>
@@ -198,7 +199,7 @@
             </main>
             <!--  /section__main-->
             <footer class="section__footer">
-                <a href="#" class="btn btn--default">Заказать оценку</a>
+                <a href="#callback" class="btn btn--default">Заказать оценку</a>
             </footer>
             <!-- /section__footer-->
         </section>
@@ -312,7 +313,7 @@
             </main>
             <!--  /section__main-->
             <footer class="section__footer section__footer--gray">
-                <a href="#" class="btn btn--default">Заказать сопровождение</a>
+                <a href="#callback" class="btn btn--default">Заказать сопровождение</a>
             </footer>
             <!-- /section__footer-->
         </section>
@@ -407,7 +408,7 @@
             </main>
             <!--  /section__main-->
             <footer class="section__footer section__footer--blue">
-                <a href="#" class="btn btn--default">Заказать бухгалтерские услуги</a>
+                <a href="#callback" class="btn btn--default">Заказать бухгалтерские услуги</a>
             </footer>
             <!-- /section__footer-->
         </section>
@@ -464,7 +465,7 @@
             </main>
             <!--  /section__main-->
             <footer class="section__footer section__footer--gray">
-                <a href="#" class="btn btn--default">Обратиться к нам</a>
+                <a href="#callback" class="btn btn--default">Обратиться к нам</a>
             </footer>
             <!-- /section__footer-->
         </section>
@@ -499,7 +500,7 @@
             </main>
             <!--  /section__main-->
             <footer class="section__footer section__footer--blue">
-                <a href="#" class="btn btn--default">Оставить заявку</a>
+                <a href="#callback" class="btn btn--default">Оставить заявку</a>
             </footer>
             <!-- /section__footer-->
         </section>
@@ -684,6 +685,8 @@
                             </div>
                             <!--/form__control-->
                             <button class="form__button btn btn--default" type="submit">Отправить</button>
+
+                            <input type="hidden" name="formName" value="заявка с нижней формы">
                         </form>
                         <!--/form-->
                     </div>
@@ -715,7 +718,34 @@
             </div>
             <!--/header__top-->
         </div>
+        <!--/container-->
+        <div class="footer__bottom" title="toTop">
+
+        </div>
     </footer>
+
+    <div class="hidden">
+        <form action="#" class="form form--callback" id="callback">
+            <h5 class="form__title">Заявка:</h5>
+            <p class="form__desc">Оставьте заявку и мы свяжемся с вами
+                в течение 15 минут в рабочее
+                время с 10:00 до 18:00 c пн-пт.</p>
+            <div class="form__control">
+                <label for="name">Ваше имя:</label>
+                <input class="form__input" type="text" id="name" name="name">
+            </div>
+            <!--/form__control-->
+            <div class="form__control">
+                <label for="phone">Ваш телефон:</label>
+                <input class="form__input" type="text" id="phone" name="phone">
+            </div>
+            <!--/form__control-->
+            <button class="form__button btn btn--default" type="submit">Отправить</button>
+            <input type="hidden" name="formName" value="">
+        </form>
+        <!--/form-->
+    </div>
+
 
     <!-- jquery -->
     <script src="js/jquery-3.5.1.js"></script>
@@ -731,6 +761,8 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
 
     <script src="js/owl.carousel.min.js"></script>
+
+    <script src="js/animate-css.js"></script>
 
     <script src="js/init.js"></script>
 </body>

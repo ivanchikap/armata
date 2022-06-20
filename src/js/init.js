@@ -199,4 +199,74 @@ $(document).ready(function(){
         dotsSpeed: 500,
         dragEndSpeed: 500,
     });
+    // owl carousel
+
+    $(".header__btn").click(function() {
+        $("html, body").animate({scrollTop: $(".header").height() + 120}, "slow");
+        return false;
+    });
+    // плавная прокрутка по нжатию на якорь
+
+    $(".footer__bottom").click(function() {
+        $("html, body").animate({scrollTop: 0}, "slow");
+        return false;
+    });
+    // плавная прокрутка по нжатию на якорь
+
+    $(".section__desc, .section__title").animated("fadeInRight");
+
+    $(".estimate .article, .services-article").animated("zoomIn");
+
+    $(".deals").waypoint(function() {
+        $(".deals .section__main .deals-card").each(function(index) {
+            let ths = $(this);
+            setInterval(function () {
+                ths.addClass("deals-card--on");
+            }, 200*index);
+        });
+    }, {
+        offset: "30%"
+    });
+
+    $(".professional").waypoint(function() {
+        $(".professional .professional__item").each(function(index) {
+            let ths = $(this);
+            setInterval(function () {
+                ths.addClass("professional__item--on");
+            }, 200*index);
+        });
+    },{
+        offset: "30%"
+    });
+
+    $(".slider__item").animated("rollIn");
+
+    $(".professional .form").animated("fadeInRight");
+
+    $(".section .btn").click(function() {
+        $("#callback h5").html($(this).text());
+        $("#callback input[name=formName]").val($(this).text());
+    }).magnificPopup(
+        {
+            type: 'inline',
+            // midClick: true
+        }
+    );
+
+    //Аякс отправка форм
+    //Документация: http://api.jquery.com/jquery.ajax/
+    $(".form").submit(function() {
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: $(this).serialize()
+        }).done(function() {
+            alert("Спасибо за заявку!");
+            setTimeout(function() {
+                $.magnificPopup.close();
+                $(".form").trigger("reset");
+            }, 1000);
+        });
+        return false;
+    });
 });
